@@ -1,0 +1,30 @@
+lr0: 0.01  # initial learning rate (SGD=1E-2, Adam=1E-3)
+lrf: 0.01  # final OneCycleLR learning rate (lr0 * lrf)
+momentum: 0.937  # SGD momentum/Adam beta1
+weight_decay: 0.0005  # optimizer weight decay 5e-4
+warmup_epochs: 3.0  # warmup epochs (fractions ok)
+warmup_momentum: 0.8  # warmup initial momentum
+warmup_bias_lr: 0.1  # warmup initial bias lr
+box: 7.5  # box loss gain 目标框回归损失权重，这个值越大，越关注目标框回归精度
+cls: 0.5  # cls loss gain 分类损失权重，这个值越大，越关注分类精度
+cls_pw: 1.0  # cls BCELoss positive_weight
+obj: 0.7  # obj loss gain (scale with pixels) 目标检测损失权重，这个值越大，越关注目标检测精度
+obj_pw: 1.0  # obj BCELoss positive_weight
+dfl: 1.5  # dfl loss gain
+iou_t: 0.20  # IoU training threshold
+anchor_t: 5.0  # anchor-multiple threshold
+# anchors: 3  # anchors per output layer (0 to ignore)
+fl_gamma: 0.0  # focal loss gamma (efficientDet default gamma=1.5)
+hsv_h: 0.015  # image HSV-Hue augmentation (fraction) 色调增强
+hsv_s: 0.7  # image HSV-Saturation augmentation (fraction) 饱和度增强
+hsv_v: 0.4  # image HSV-Value augmentation (fraction) 亮度增强
+degrees: 0.0  # image rotation (+/- deg) 旋转角度（+/-度）
+translate: 0.1  # image translation (+/- fraction) 平移（+/-分数）
+scale: 0.9  # image scale (+/- gain) 缩放（+/-增益）
+shear: 0.0  # image shear (+/- deg)
+perspective: 0.0  # image perspective (+/- fraction), range 0-0.001
+flipud: 0.0  # image flip up-down (probability)
+fliplr: 0.5  # image flip left-right (probability)
+mosaic: 1.0  # image mosaic (probability) 马赛克（概率），这个值越大，越关注马赛克
+mixup: 0.15  # image mixup (probability) 混合（概率），这个值越大，越关注混合
+copy_paste: 0.3  # segment copy-paste (probability)

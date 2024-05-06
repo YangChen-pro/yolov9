@@ -1,0 +1,16 @@
+my_test.py
+
+weights
+
+runs/train/exp*
+
+runs/detect/exp*
+
+show_img
+
+**/*.pt
+
+**/__pycache__/
+
+.idea
+
